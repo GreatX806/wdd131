@@ -1,71 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WDD 131 - Dynamic Web Fundamentals - Doris Uchechukwu Anakwuba</title>
-  <meta name="author" content="Doris Uchechukwu Anakwuba" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-  <meta name="description" content="WDD 131 - Dynamic Web Fundamentals home page for Doris Uchechukwu Anakwuba, a web developer from Nigeria." />
-  <link rel="stylesheet" href="styles/base.css" />
-  <script defer src="scripts/getdates.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Dynamic Web Fundamentals – Great Afangide</title>
+    <meta name="description"
+        content="WDD 131 – Dynamic Web Fundamentals | Great Afangide | Web development profile, goals, and resources.">
+    <meta name="author" content="Great Afangide">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
-  <header>
-    <span id="course-title" class="page-title">WDD 131: Dynamic Web Fundamentals - Doris Uchechukwu Anakwuba</span>
-    <nav>
-      <a href="https://www.linkedin.com/in/devdoris/" target="_blank">LinkedIn</a>
-      <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
-      <a href="https://www.churchofjesuschrist.org/study/scriptures?lang=eng" target="_blank">Scripture</a>
-      <a href="https://devdoris.github.io/wdd131/index.html" target="_blank">Final Project</a>
-    </nav>
-  </header>
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals - Great Afangide</span>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/great-afangide-598083270" target="_blank">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a></li>
+                <li><a href="final-project.html">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <h1>Hello, I'm Doris Uchechukwu Anakwuba</h1>
+    <main class="grid-layout">
+        <section class="card profile">
+            <h2>About Me</h2>
+            <img src="images/proffessional-image.png" alt="Professional photo of Great Afangide">
+            <p>
+                My name is Great Afangide and I am from Nigeria. I'm looking forward to taking this course,
+                gaining new knowledge, and finding inspiration as I learn and grow in web development.
+                I aim to create beautiful, functional, and user-friendly digital experiences.
+            </p>
+            <p><strong>Lagos State, Nigeria</strong></p>
+        </section>
 
-    <section class="card">
-      <h2>About Me</h2>
-      <div class="info-body">
-        <p>
-          My name is Doris, and I am from Nigeria. I'm a passionate learner currently studying web development through BYU-Pathway Worldwide. 
-          I enjoy problem-solving, building user-friendly web applications, and continuously learning new technologies. 
-          Outside of tech, I love music, reading, and spending time with family.
-        </p>
-        <img id="my-photo" src="images/doris.jpg" alt="photo-of-doris-uchechukwu-anakwuba" />
-      </div>
+        <section class="card resources">
+            <h2>Web Dev Resources</h2>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+                <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a></li>
+                <li><a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
+            </ul>
+        </section>
 
-      <h3>Lagos, Nigeria</h3>
-      <div class="my-country">
-        <img src="images/flag-image.jpeg" alt="Flag of Nigeria" />
-        <p><em>Official Flag of Nigeria</em></p>
-        <p>
-          Nigeria is a lively and beautiful country in West Africa. 
-          It's full of culture, music, and delicious food. 
-          People here are known for their kindness, creativity, and strong spirit.
-        </p>
-      </div>
-    </section>
+        <section class="card goals">
+            <h2>Web Development Goals</h2>
+            <img src="images/new-flag.png" alt="Nigerian Flag" width="200" height="120">
+            <p>
+                My goals for this course are to master responsive design principles,
+                understand dynamic web fundamentals using JavaScript, and build a strong
+                portfolio of projects that showcase professional-grade work. I believe
+                in writing clean, accessible code.
+            </p>
+            </section>
+        </main>
 
-    <section class="card">
-      <h2>My Favorite Web Resources</h2>
-      <ul>
-        <li><a href="https://codepen.io" target="_blank">Code Pen</a></li>
-        <li><a href="https://scrimba.com" target="_blank">Scrimba</a></li>
-        <li><a href="https://www.sololearn.com" target="_blank">SoloLearn</a></li>
-        <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
-        <li><a href="https://www.freecodecamp.org" target="_blank">freeCodeCamp</a></li>
-        <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    <p>© <span id="year-now"></span> ✺ Doris Uchechukwu Anakwuba ✺ Nigeria</p>
-    <p id="page-update"></p>
-  </footer>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Great Afangide | Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
+
 </html>
