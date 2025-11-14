@@ -1,0 +1,72 @@
+/* ... [Previous CSS (Mobile-First)] ... */
+
+/* --- Media Query for Wider View (e.g., > 600px) Requirement --- */
+@media (min-width: 600px) {
+    main {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem;
+        /* Define the main grid for desktop layout */
+        display: grid;
+        grid-template-columns: 2fr 1fr; /* Data (2fr) next to Weather (1fr) */
+        grid-template-rows: auto 10px auto;
+        gap: 1.5rem;
+        grid-template-areas: 
+            "hero hero"
+            "stripe stripe"
+            "data weather"; /* Data and Weather side by side */
+    }
+
+    .hero {
+        grid-area: hero;
+    }
+
+    .bottom-stripe {
+        grid-area: stripe;
+    }
+
+    /* DATA Section: Two columns for the lists */
+    .data {
+        grid-area: data;
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-gap: 5px;
+        /* Ensure the H2 spans both columns */
+    }
+
+    .data h2 {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+    
+    /* WEATHER Section: Icon and content side by side */
+    .weather {
+        grid-area: weather;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "title title" /* H2 (Weather) spans both columns */
+            "rlist llist"; /* Lists side by side */
+        align-items: center;
+    }
+    
+    .weather h2 {
+        grid-area: title;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Pseudo Element for Wider View Weather Icon (Requirement) */
+    .weather-title::after {
+        /* Adds the required emoticon next to the Weather H2 in desktop view */
+        content: " ⛅"; 
+        font-size: 1.2em;
+        vertical-align: middle;
+        margin-left: 5px;
+    }
+    
+    /* Hide the SVG icon in the wider view (replaced by pseudo-element) */
+    #mobile-weather-icon {
+        display: none; 
+    }
+}
