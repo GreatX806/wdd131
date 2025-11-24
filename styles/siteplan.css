@@ -1,0 +1,150 @@
+/* --- Imports for Typography (Criterion 10) --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap');
+
+/* --- Color Variables (Criterion 7 & 8) --- */
+:root {
+    --primary-color: #4CAF50; /* Earth Green */
+    --secondary-color: #8B4513; /* Rich Soil Brown */
+    --accent-color: #87CEEB; /* Sky Blue */
+    --light-color: #FAFAFA; /* Page Background */
+    --text-color: #222222;
+    --heading-font: 'Playfair Display', serif; /* Criterion 9 */
+    --body-font: 'Roboto', sans-serif; /* Criterion 9 */
+}
+
+/* --- General Styles --- */
+body {
+    font-family: var(--body-font);
+    background-color: var(--light-color);
+    color: var(--text-color);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
+
+/* --- Typography Styles (Criterion 10) --- */
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: white;
+}
+
+section {
+    background-color: white;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid var(--primary-color);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Color Schema Table Styles (Criterion 7 & 8) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+th {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.color-sample {
+    width: 50px;
+}
+
+.primary-color-row .color-sample { background-color: var(--primary-color); }
+.secondary-color-row .color-sample { background-color: var(--secondary-color); }
+.accent-color-row .color-sample { background-color: var(--accent-color); }
+.light-color-row .color-sample { background-color: var(--light-color); border: 1px dashed #333; }
+
+/* --- Typography Table Styles --- */
+.heading-font td:nth-child(2) { font-family: var(--heading-font); font-weight: 700; }
+.body-font td:nth-child(2) { font-family: var(--body-font); }
+
+/* --- Wireframe Styles (Visual Aid) --- */
+.wireframe-box {
+    border: 2px dashed var(--secondary-color);
+    padding: 10px;
+    margin-top: 15px;
+    text-align: center;
+    min-height: 250px;
+    position: relative;
+    font-size: 0.8rem;
+}
+
+.wireframe-box h4 {
+    margin-top: 0;
+}
+
+.wireframe-box.mobile {
+    width: 300px;
+    height: 600px;
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wireframe-box.desktop {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 10px;
+    height: 600px;
+}
+
+.element {
+    background-color: rgba(139, 69, 19, 0.2);
+    border: 1px solid var(--secondary-color);
+    padding: 5px;
+    margin: 2px;
+}
+
+/* Desktop grid layout assignments */
+.header-lg { grid-column: 1 / 3; }
+.menu-lg { grid-column: 1 / 3; }
+.hero-desktop { grid-column: 1 / 3; height: 120px; }
+.sidebar { grid-column: 1 / 2; }
+.content-main { grid-column: 2 / 3; }
+.content-events { grid-column: 1 / 3; }
+.footer-lg { grid-column: 1 / 3; }
+
+/* Mobile flex layout assignments */
+.element.header, .element.footer { width: 100%; }
+.element.main-img { width: 95%; height: 100px; }
+.element.weather { width: 95%; }
+.element.cta { width: 70%; }
+.element.events-summary { width: 95%; flex-grow: 1; }
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+}
