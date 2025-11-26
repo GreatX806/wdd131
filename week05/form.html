@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Review Form</title>
-    <meta name="description" content="my form page ">
+    <meta name="description" content="WDD 131 - Product Review Form for Great Afangide Week05 Assignment">
     <meta name="author" content="Great Afangide">
     <link rel="stylesheet" href="../styles/form.css">
     <script src="../scripts/form.js" defer></script>
@@ -39,12 +39,12 @@
 
             <fieldset>
                 <legend>Overall Rating (1 to 5) *</legend>
-                <input type="radio" id="rating5" name="overall-rating" value="5" required><label
-                    for="rating5">★★★★★</label>
+                <input type="radio" id="rating5" name="overall-rating" value="5"><label for="rating5">★★★★★</label>
                 <input type="radio" id="rating4" name="overall-rating" value="4"><label for="rating4">★★★★☆</label>
                 <input type="radio" id="rating3" name="overall-rating" value="3"><label for="rating3">★★★☆☆</label>
                 <input type="radio" id="rating2" name="overall-rating" value="2"><label for="rating2">★★☆☆☆</label>
-                <input type="radio" id="rating1" name="overall-rating" value="1"><label for="rating1">★☆☆☆☆</label>
+                <input type="radio" id="rating1" name="overall-rating" value="1" required><label
+                    for="rating1">★☆☆☆☆</label>
             </fieldset>
 
             <label for="install-date">Date of Installation *</label>
@@ -57,7 +57,9 @@
                 <input type="checkbox" id="feature2" name="feature_easy" value="Ease of Use"><label for="feature2">Ease
                     of Use</label><br>
                 <input type="checkbox" id="feature3" name="feature_power" value="Performance"><label
-                    for="feature3">Performance</label>
+                    for="feature3">Performance</label><br>
+                <input type="checkbox" id="feature4" name="feature_value" value="ValueForMoney"><label
+                    for="feature4">Value for Money</label>
             </fieldset>
 
             <label for="review-text">Written Review</label>
