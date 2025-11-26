@@ -1,0 +1,170 @@
+/* --- 1. Global Reset & Typography --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background */
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #007bff; /* Primary color */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* --- 2. Form Layout & Elements --- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between form fields/groups */
+}
+
+/* Style for all labels */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block; /* Ensures label takes up its own line */
+}
+
+/* Style for all text, select, date, and textarea inputs */
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Includes padding in the element's total width */
+}
+
+/* Style for text area */
+textarea {
+    resize: vertical; /* Only allow vertical resizing */
+}
+
+/* Style for fieldset/legend (for radio buttons and checkboxes) */
+fieldset {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+    color: #007bff;
+}
+
+/* Grouping radio/checkbox inputs */
+fieldset div {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    gap: 20px;
+    padding-top: 5px;
+}
+
+/* Custom styling for the submit button */
+input[type="submit"] {
+    background-color: #28a745; /* Success/Submit color */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Styling for the star rating (radio buttons) */
+/* Hide the actual radio input */
+fieldset input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+/* Style the labels (stars) for the rating */
+fieldset label[for^="rating"] {
+    font-size: 1.5em; 
+    color: #ccc; /* Default star color */
+    cursor: pointer;
+    display: inline; /* Keep stars on the same line */
+    margin-right: 5px;
+}
+
+/* Highlight selected star */
+fieldset input[type="radio"]:checked + label {
+    color: gold; 
+}
+
+/* --- 3. Responsiveness (Media Query) --- */
+@media (max-width: 600px) {
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    /* Ensure the form elements stack vertically on small screens */
+    form {
+        gap: 10px;
+    }
+    
+    /* Decrease font size for mobile readability if necessary */
+    body {
+        font-size: 15px;
+    }
+}
+
+/* --- 4. Confirmation Page Styles (review.html) --- */
+/* Simple style for the confirmation message */
+main h2 {
+    color: #28a745; 
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Style for the review count number */
+#review-count {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #007bff;
+}
+footer{
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+#year-now {
+    font-weight: bold;
+    color: white;
+}
+p{
+    color: white;
+}
+span#page-update {
+    font-size: 0.9em;
+    color: white;
+}
+options{
+    color: black;
+    color: #000;
+}
