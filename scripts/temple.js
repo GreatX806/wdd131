@@ -16,3 +16,9 @@ const hamburger= document.getElementById('hamburger')
       hamburgerMenu.innerHTML = "&#x2715;";
     }
   });
+  const menuButton = document.getElementById("menu");
+const nav = document.getElementById("nav");
+
+menuButton.addEventListener("click", () => {
+    nav.classList.toggle("show");
+});
