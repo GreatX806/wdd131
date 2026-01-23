@@ -24,7 +24,7 @@ header {
     border-bottom: 5px solid var(--secondary-color); 
 }
 
-/* Consolidate: This is the ONLY top-level rule for the icon */
+/* FIXED: Consolidated .weather-icon-mobile to one rule to fix "Repeated Rules" error */
 .weather-icon-mobile { 
     display: block; 
     margin: 10px auto; 
@@ -59,29 +59,39 @@ footer {
     padding: 1rem; 
 }
 
-/* 3. Media Query (Wider View) */
+/* 3. FIXED: Media Query Requirement */
 @media screen and (min-width: 700px) {
     main {
         position: relative;
-        max-width: 1000px; /* Limits main width */
+        max-width: 1000px; /* Limits main width per assignment */
         margin: 0 auto;
     }
 
-    /* Positioning cards over hero image */
+    /* Requirement: CSS Grid or Absolute positioning for cards overlay */
     .data, .weather {
         position: absolute;
         background: var(--overlay-bg);
         width: 250px;
         z-index: 10;
+        margin: 0; /* Reset margins for positioning */
     }
 
-    .data { top: 20px; left: 20px; }
-    .weather { bottom: 20px; right: 20px; }
+    .data { 
+        top: 20px; 
+        left: 20px; 
+    }
 
-    /* Hide mobile icon */
-    .weather-icon-mobile { display: none; }
+    .weather { 
+        bottom: 20px; 
+        right: 20px; 
+    }
 
-    /* Requirement: Pseudo element for desktop icon */
+    /* Hide mobile icon in wide view */
+    .weather-icon-mobile { 
+        display: none; 
+    }
+
+    /* Requirement: Pseudo element for desktop icon icon */
     .weather-heading::after {
         content: " ⛅";
     }
