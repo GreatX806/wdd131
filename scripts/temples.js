@@ -4,17 +4,20 @@ if (modifiedElement) {
     modifiedElement.textContent = `Last Modified: ${document.lastModified}`;
 }
 
-/* Hamburger Menu */
+/* Hamburger Menu Toggle */
 const menuButton = document.getElementById("menu");
-const nav = document.getElementById("nav");
+const navMenu = document.getElementById("nav"); // Ensure your nav has id="nav"
 
 menuButton.addEventListener("click", () => {
-    nav.classList.toggle("open");
+    navMenu.classList.toggle("open");
+    menuButton.classList.toggle("active");
 
-    // toggle icon
-    if (nav.classList.contains("open")) {
-        menuButton.innerHTML = "&#x2715;";
+    // Toggle icon and aria-label for accessibility
+    if (navMenu.classList.contains("open")) {
+        menuButton.innerHTML = "&#x2715;"; // X icon
+        menuButton.setAttribute("aria-expanded", "true");
     } else {
-        menuButton.innerHTML = "☰";
+        menuButton.innerHTML = "&#9776;"; // Hamburger icon
+        menuButton.setAttribute("aria-expanded", "false");
     }
 });

@@ -117,3 +117,40 @@ footer {
     text-align: center;
     padding: 1rem;
 }
+/* Base Mobile Styles */
+#menu {
+    display: block; /* Show button on mobile */
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#nav {
+    display: none; /* Hide menu items by default on mobile */
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+}
+
+/* Interactivity: Show menu when 'open' class is added */
+#nav.open {
+    display: flex;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    width: 100%;
+}
+
+/* Responsive: Desktop Styles */
+@media (min-width: 700px) {
+    #menu {
+        display: none; /* Hide hamburger button on large screens */
+    }
+
+    #nav {
+        display: flex; /* Always show menu items on desktop */
+        flex-direction: row;
+        position: static;
+    }
+}
