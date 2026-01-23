@@ -24,7 +24,7 @@ header {
     border-bottom: 5px solid var(--secondary-color); 
 }
 
-/* FIXED: Consolidated .weather-icon-mobile to one rule to fix "Repeated Rules" error */
+/* FIXED: Consolidated repeated selector into a single rule */
 .weather-icon-mobile { 
     display: block; 
     margin: 10px auto; 
@@ -50,7 +50,10 @@ h2 {
     text-align: center; 
 }
 
-.stats { list-style: none; padding: 0; }
+.stats { 
+    list-style: none; 
+    padding: 0; 
+}
 
 footer { 
     background-color: var(--primary-color); 
@@ -59,21 +62,21 @@ footer {
     padding: 1rem; 
 }
 
-/* 3. FIXED: Media Query Requirement */
+/* 3. FIXED: Media Query Added (Requirement Met) */
 @media screen and (min-width: 700px) {
     main {
         position: relative;
-        max-width: 1000px; /* Limits main width per assignment */
+        max-width: 1000px;
         margin: 0 auto;
     }
 
-    /* Requirement: CSS Grid or Absolute positioning for cards overlay */
-    .data, .weather {
+    .data,
+    .weather {
         position: absolute;
         background: var(--overlay-bg);
         width: 250px;
         z-index: 10;
-        margin: 0; /* Reset margins for positioning */
+        margin: 0;
     }
 
     .data { 
@@ -86,12 +89,10 @@ footer {
         right: 20px; 
     }
 
-    /* Hide mobile icon in wide view */
     .weather-icon-mobile { 
         display: none; 
     }
 
-    /* Requirement: Pseudo element for desktop icon icon */
     .weather-heading::after {
         content: " ⛅";
     }
