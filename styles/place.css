@@ -1,0 +1,23 @@
+:root {
+    --primary-color: #c4262e; /* Madagascar Red */
+    --secondary-color: #007a33; /* Madagascar Green */
+    --white: #ffffff;
+    --text-color: #333;
+    --bg-color: #f4f4f4;
+}
+
+body { font-family: Arial, sans-serif; margin: 0; background-color: var(--bg-color); }
+
+header { background-color: var(--primary-color); color: var(--white); text-align: center; padding: 1rem; border-bottom: 5px solid var(--secondary-color); }
+
+.hero img { width: 100%; height: auto; display: block; }
+
+section { background: var(--white); margin: 1rem; padding: 1rem; border: 1px solid #ddd; }
+
+h2 { border-bottom: 1px solid var(--secondary-color); padding-bottom: 0.5rem; color: var(--secondary-color); text-align: center; }
+
+.stats { list-style: none; padding: 0; line-height: 1.8; }
+
+.weather-icon-mobile { display: block; margin: 0 auto; width: 80px; }
+
+footer { background-color: var(--primary-color); color: var(--white); text-align: center; padding: 1rem; }
