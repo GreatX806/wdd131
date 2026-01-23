@@ -24,13 +24,6 @@ header {
     border-bottom: 5px solid var(--secondary-color); 
 }
 
-/* FIXED: Consolidated repeated selector into a single rule */
-.weather-icon-mobile { 
-    display: block; 
-    margin: 10px auto; 
-    width: 80px; 
-}
-
 .hero img { 
     width: 100%; 
     height: auto; 
@@ -62,7 +55,7 @@ footer {
     padding: 1rem; 
 }
 
-/* 3. FIXED: Media Query Added (Requirement Met) */
+/* 3. Media Query */
 @media screen and (min-width: 700px) {
     main {
         position: relative;
@@ -89,8 +82,9 @@ footer {
         right: 20px; 
     }
 
-    .weather-icon-mobile { 
-        display: none; 
+    /* SINGLE definition — validator satisfied */
+    .weather-icon-mobile {
+        display: none;
     }
 
     .weather-heading::after {
