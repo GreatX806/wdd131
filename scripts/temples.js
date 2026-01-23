@@ -1,24 +1,20 @@
+/* Last Modified */
 const modifiedElement = document.getElementById("lastModified");
 if (modifiedElement) {
     modifiedElement.textContent = `Last Modified: ${document.lastModified}`;
 }
-document.getElementById("lastModified").innerHTML = document.lastModified;
-const hamburger= document.getElementById('hamburger')
- .querySelector(".hamburger-menu")
-  .addEventListener("click", function () {
-    const nav = document.querySelector("nav");
-    const hamburgerMenu = document.querySelector(".hamburger-menu");
-    if (nav.style.display === "block") {
-      nav.style.display = "none";
-      hamburgerMenu.innerHTML = "☰";
-    } else {
-      nav.style.display = "block";
-      hamburgerMenu.innerHTML = "&#x2715;";
-    }
-  });
-  const menuButton = document.getElementById("menu");
+
+/* Hamburger Menu */
+const menuButton = document.getElementById("menu");
 const nav = document.getElementById("nav");
 
 menuButton.addEventListener("click", () => {
-    nav.classList.toggle("show");
+    nav.classList.toggle("open");
+
+    // toggle icon
+    if (nav.classList.contains("open")) {
+        menuButton.innerHTML = "&#x2715;";
+    } else {
+        menuButton.innerHTML = "☰";
+    }
 });
