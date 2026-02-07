@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website planning document for the Mindful Wellness Hub project">
+    <meta name="author" content="Great Afangide">
+    <title>Site Plan - Mindful Wellness Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2C5F4F;
+            --secondary-color: #D4A373;
+            --accent-color: #8B9A7E;
+            --background-light: #F8F6F3;
+            --text-dark: #2B2B2B;
+            --text-light: #5A5A5A;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--background-light);
+            line-height: 1.7;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            background: var(--white);
+            margin: 2.5rem 0;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            font-size: 1.05rem;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--white);
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(44, 95, 79, 0.3);
+        }
+
+        .site-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .domain {
+            background: var(--background-light);
+            padding: 0.8rem 1.2rem;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            color: var(--text-dark);
+            border: 2px dashed var(--accent-color);
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .scenarios {
+            background: var(--background-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+            margin: 1rem 0;
+        }
+
+        .scenarios h4 {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .color-palette {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .color-box {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .color-sample {
+            height: 100px;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .color-primary {
+            background-color: var(--primary-color);
+        }
+
+        .color-secondary {
+            background-color: var(--secondary-color);
+        }
+
+        .color-accent {
+            background-color: var(--accent-color);
+        }
+
+        .color-info {
+            background: var(--background-light);
+            padding: 1rem;
+            border-radius: 6px;
+        }
+
+        .color-info strong {
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .color-info p {
+            margin: 0.3rem 0;
+            font-size: 0.95rem;
+        }
+
+        .typography-sample {
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: var(--background-light);
+            border-radius: 8px;
+        }
+
+        .font-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .font-body {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.1rem;
+            color: var(--text-light);
+        }
+
+        .font-details {
+            background: var(--white);
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 6px;
+            border-left: 3px solid var(--secondary-color);
+        }
+
+        .wireframes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .wireframe-box {
+            background: var(--background-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .wireframe-box h4 {
+            color: var(--primary-color);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .wireframe-image {
+            background: var(--white);
+            border: 2px solid var(--accent-color);
+            border-radius: 6px;
+            padding: 2rem;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .wireframe-header {
+            height: 60px;
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+
+        .wireframe-hero {
+            height: 120px;
+            background: var(--secondary-color);
+            border-radius: 4px;
+        }
+
+        .wireframe-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.8rem;
+            flex-grow: 1;
+        }
+
+        .wireframe-card {
+            background: var(--accent-color);
+            border-radius: 4px;
+        }
+
+        .wireframe-footer {
+            height: 50px;
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+
+        .wireframe-mobile .wireframe-content {
+            grid-template-columns: 1fr;
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            color: var(--white);
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            .color-palette {
+                flex-direction: column;
+            }
+
+            .wireframes {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Website Planning Document</h1>
+        <p>WDD 131: Dynamic Web Fundamentals - Project Plan</p>
+    </header>
+
+    <div class="container">
+        <section id="site-name">
+            <h2>Site Name</h2>
+            <div class="logo-section">
+                <div class="logo">MW</div>
+                <div class="site-name">Mindful Wellness Hub</div>
+            </div>
+            <p>The name "Mindful Wellness Hub" was chosen to reflect the site's focus on holistic health and well-being.
+                The word "Mindful" emphasizes awareness and intentionality in health practices, while "Wellness"
+                encompasses physical, mental, and emotional health. "Hub" suggests a central gathering place for
+                resources, information, and community connection.</p>
+            <p>This name is memorable, clearly communicates the site's purpose, and appeals to individuals seeking a
+                balanced, thoughtful approach to health and wellness. It positions the site as a comprehensive resource
+                center rather than a single-focus platform.</p>
+            <div class="domain">Optional domain: mindful-wellness-hub.com</div>
+        </section>
+
+        <section id="site-purpose">
+            <h2>Site Purpose</h2>
+            <p>The Mindful Wellness Hub serves as a comprehensive online resource for individuals seeking to improve
+                their overall well-being through evidence-based practices and community support. The site provides
+                practical tools, educational content, and connections to wellness resources.</p>
+            <p><strong>Primary Services and Information:</strong></p>
+            <p>The site offers guided meditation resources, wellness practice recommendations tailored to different
+                lifestyles and goals, educational articles on mental and physical health topics, a directory of
+                certified wellness practitioners, and an interactive community forum where members can share experiences
+                and support one another. Additionally, the site provides a newsletter signup feature to deliver weekly
+                wellness tips and updates directly to subscribers.</p>
+            <p>The target audience includes working professionals experiencing stress, individuals new to wellness
+                practices seeking guidance, people managing anxiety or seeking mental health support, and anyone
+                interested in developing sustainable healthy habits. The site aims to make wellness accessible,
+                practical, and sustainable for everyday life.</p>
+        </section>
+
+        <section id="scenarios">
+            <h2>Scenarios</h2>
+
+            <div class="scenarios">
+                <h4>Scenario 1: Stress Management for Beginners</h4>
+                <p>Sarah is a 32-year-old marketing manager who has been experiencing high levels of work-related
+                    stress. She's heard about meditation but doesn't know where to start. She visits the site asking:
+                    "What are some simple, beginner-friendly meditation techniques I can practice during my lunch
+                    break?" She's looking for quick, practical techniques that don't require special equipment and can
+                    be done in 10-15 minutes.</p>
+            </div>
+
+            <div class="scenarios">
+                <h4>Scenario 2: Finding Professional Support</h4>
+                <p>Michael is a 45-year-old teacher who wants to find a certified wellness coach or therapist in his
+                    area who specializes in stress management and work-life balance. He asks: "How can I find qualified
+                    wellness practitioners near me, and what credentials should I look for?" He needs clear guidance on
+                    professional qualifications and wants verified contact information and specialties.</p>
+            </div>
+
+            <div class="scenarios">
+                <h4>Scenario 3: Building Sustainable Habits</h4>
+                <p>Emma is a 28-year-old software developer who has tried multiple wellness routines but struggles to
+                    maintain them long-term. She's asking: "What are realistic wellness practices I can incorporate into
+                    a busy schedule, and how do I stay consistent?" She needs practical advice on habit formation and
+                    realistic expectations for building lasting wellness practices.</p>
+            </div>
+        </section>
+
+        <section id="color-schema">
+            <h2>Color Schema</h2>
+            <p>The color palette for Mindful Wellness Hub was carefully selected to evoke feelings of calm, growth, and
+                natural balance while maintaining professional credibility and accessibility.</p>
+
+            <div class="color-palette">
+                <div class="color-box">
+                    <div class="color-sample color-primary"></div>
+                    <div class="color-info">
+                        <strong>Primary Color: Forest Green</strong>
+                        <p><strong>Hex:</strong> #2C5F4F</p>
+                        <p><strong>Usage:</strong> Main headings, navigation bar, footer background, and primary
+                            buttons. This deep green conveys growth, stability, and natural wellness.</p>
+                    </div>
+                </div>
+
+                <div class="color-box">
+                    <div class="color-sample color-secondary"></div>
+                    <div class="color-info">
+                        <strong>Secondary Color: Warm Sand</strong>
+                        <p><strong>Hex:</strong> #D4A373</p>
+                        <p><strong>Usage:</strong> Accent elements, highlights, call-to-action buttons, and decorative
+                            borders. This warm, earthy tone adds approachability and complements the primary color.</p>
+                    </div>
+                </div>
+
+                <div class="color-box">
+                    <div class="color-sample color-accent"></div>
+                    <div class="color-info">
+                        <strong>Accent Color: Sage Green</strong>
+                        <p><strong>Hex:</strong> #8B9A7E</p>
+                        <p><strong>Usage:</strong> Secondary headings, links, icon backgrounds, and subtle dividers.
+                            This softer green creates visual hierarchy and maintains the natural, calming theme.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p style="margin-top: 1.5rem;"><strong>Additional Supporting Colors:</strong></p>
+            <p>Background Light (#F8F6F3) for page backgrounds and card elements, Text Dark (#2B2B2B) for body text and
+                primary content, and Text Light (#5A5A5A) for secondary text and descriptions. These colors ensure
+                excellent readability and pass WCAG accessibility standards for contrast ratios.</p>
+        </section>
+
+        <section id="typography">
+            <h2>Typography</h2>
+            <p>The typography system combines elegance with readability, using two carefully selected Google Fonts that
+                complement the wellness theme while maintaining professional standards.</p>
+
+            <div class="typography-sample">
+                <div class="font-heading">Playfair Display - Heading Font</div>
+                <div class="font-body">Lato - Body Text Font</div>
+
+                <div class="font-details">
+                    <p><strong>Playfair Display (Serif)</strong> - Used for all headings (h1, h2, h3) and the site logo.
+                        This elegant serif font adds sophistication and establishes visual hierarchy. Font weights: 600
+                        (semi-bold) and 700 (bold). The high-contrast letterforms create distinction and memorable
+                        branding.</p>
+                </div>
+
+                <div class="font-details">
+                    <p><strong>Lato (Sans-serif)</strong> - Used for body text, navigation links, buttons, and form
+                        labels. This highly legible sans-serif font ensures comfortable reading across all devices. Font
+                        weights: 300 (light) for subtle text, 400 (regular) for body content, and 700 (bold) for
+                        emphasis. Its humanist design feels friendly and accessible.</p>
+                </div>
+            </div>
+
+            <p><strong>Typography Guidelines:</strong></p>
+            <p>Headings will use Playfair Display to create strong visual impact and establish clear content hierarchy.
+                Body text will use Lato for optimal readability and professional appearance. Line height is set to 1.7
+                for comfortable reading, and font sizes are responsive, scaling appropriately for mobile and desktop
+                views. All text maintains WCAG AA accessibility standards for contrast against backgrounds.</p>
+        </section>
+
+        <section id="wireframes">
+            <h2>Wireframes</h2>
+            <p>The following wireframes illustrate the layout structure for the home page in both mobile and desktop
+                views. These represent the general content organization and responsive design approach.</p>
+
+            <div class="wireframes">
+                <div class="wireframe-box">
+                    <h4>Mobile View (320px - 768px)</h4>
+                    <div class="wireframe-image wireframe-mobile">
+                        <div class="wireframe-header"></div>
+                        <div class="wireframe-hero"></div>
+                        <div class="wireframe-content">
+                            <div class="wireframe-card"></div>
+                            <div class="wireframe-card"></div>
+                            <div class="wireframe-card"></div>
+                        </div>
+                        <div class="wireframe-footer"></div>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.9rem;">Single-column layout with stacked content cards for
+                        easy mobile navigation. Header contains logo and hamburger menu. Hero section features main
+                        call-to-action. Content cards stack vertically for optimal mobile viewing.</p>
+                </div>
+
+                <div class="wireframe-box">
+                    <h4>Desktop View (769px+)</h4>
+                    <div class="wireframe-image wireframe-desktop">
+                        <div class="wireframe-header"></div>
+                        <div class="wireframe-hero"></div>
+                        <div class="wireframe-content">
+                            <div class="wireframe-card"></div>
+                            <div class="wireframe-card"></div>
+                            <div class="wireframe-card"></div>
+                        </div>
+                        <div class="wireframe-footer"></div>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.9rem;">Multi-column grid layout utilizing horizontal space.
+                        Header contains full navigation menu. Hero section spans full width with prominent imagery.
+                        Content cards display in three-column grid for efficient information presentation.</p>
+                </div>
+            </div>
+
+            <p style="margin-top: 2rem;"><strong>Layout Components:</strong></p>
+            <p>Header includes site logo and navigation menu (responsive hamburger menu on mobile). Hero section
+                features a welcoming headline, brief introduction, and primary call-to-action button. Main content area
+                displays three featured sections such as meditation resources, wellness articles, and community
+                highlights. Footer contains copyright information, social media links, and additional navigation.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Mindful Wellness Hub | WDD 131 Project | All rights reserved</p>
+    </footer>
+</body>
+
+</html>
