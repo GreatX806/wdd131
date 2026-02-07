@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product Review Submission Confirmation">
+    <meta name="author" content="Student Name">
+    <title>Review Submitted - Thank You!</title>
+    <link rel="stylesheet" href="styles/review.css">
+</head>
+
+<body>
+    <header>
+        <h1>Review Submitted!</h1>
+        <p>Thank you for your feedback</p>
+    </header>
+
+    <main>
+        <div class="confirmation-container">
+            <div class="success-icon">✓</div>
+
+            <h2>Your review has been received</h2>
+
+            <div class="review-details" id="reviewDetails">
+                <!-- Review details will be populated by JavaScript -->
+            </div>
+
+            <div class="review-counter">
+                <p>Total Reviews Completed:</p>
+                <div class="counter-display" id="reviewCounter">0</div>
+            </div>
+
+            <div class="action-buttons">
+                <a href="form.html" class="btn btn-primary">Submit Another Review</a>
+                <a href="index.html" class="btn btn-secondary">Return Home</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> | Product Review System | WDD 131</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/review.js"></script>
+</body>
+
+</html>
