@@ -1,0 +1,13 @@
+127.0.0.1 - - [17/Feb/2026 10:34:01] "GET /?password=14a828e5-cb9e-4a6e-bee6-af03eb7797d0 HTTP/1.1" 200 -
+172.16.0.1 - - [17/Feb/2026 10:34:02] "GET /?password=14a828e5-cb9e-4a6e-bee6-af03eb7797d0 HTTP/1.1" 200 -
+172.16.0.1 - - [17/Feb/2026 10:34:02] "GET /styles.css HTTP/1.1" 200 -
+172.16.0.1 - - [17/Feb/2026 10:34:02] "GET /main.js HTTP/1.1" 200 -
+172.16.0.1 - - [17/Feb/2026 10:34:04] code 404, message File not found
+172.16.0.1 - - [17/Feb/2026 10:34:04] "GET /favicon.ico HTTP/1.1" 404 -
+172.16.0.1 - - [17/Feb/2026 10:34:06] "GET /about.html HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 10:34:15] "GET /index.html HTTP/1.1" 200 -
+172.16.0.1 - - [17/Feb/2026 10:34:17] "GET /services.html HTTP/1.1" 200 -
+127.0.0.1 - - [17/Feb/2026 10:34:23] "HEAD /index.html HTTP/1.1" 200 -
+172.16.0.1 - - [17/Feb/2026 10:37:21] "GET /?hideControls=true&password=14a828e5-cb9e-4a6e-bee6-af03eb7797d0 HTTP/1.1" 200 -
+172.16.0.1 - - [17/Feb/2026 10:37:22] "GET /main.js HTTP/1.1" 200 -
+172.16.0.1 - - [17/Feb/2026 10:37:22] "GET /styles.css HTTP/1.1" 200 -

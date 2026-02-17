@@ -1,0 +1,11 @@
+about.html:45:                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop" alt="Our team collaborating on digital strategy" loading="lazy">
+about.html:101:                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop&crop=face" alt="David Thompson - CEO" class="testimonial-avatar" loading="lazy">
+about.html:107:                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face" alt="Jennifer Lee - CTO" class="testimonial-avatar" loading="lazy">
+about.html:113:                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&h=200&fit=crop&crop=face" alt="Marcus Williams - Head of SEO" class="testimonial-avatar" loading="lazy">
+about.html:119:                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=face" alt="Sarah Martinez - Social Media Director" class="testimonial-avatar" loading="lazy">
+index.html:99:                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="E-commerce platform redesign project" loading="lazy">
+index.html:106:                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=400&fit=crop" alt="Tech startup branding project" loading="lazy">
+index.html:113:                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop" alt="Restaurant marketing campaign" loading="lazy">
+index.html:132:                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Sarah Johnson" class="testimonial-avatar" loading="lazy">
+index.html:139:                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Michael Chen" class="testimonial-avatar" loading="lazy">
+index.html:146:                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" alt="Emily Rodriguez" class="testimonial-avatar" loading="lazy">

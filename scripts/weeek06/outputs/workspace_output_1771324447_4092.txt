@@ -1,0 +1,6 @@
+-rw-r--r-- 1 root root 9.2K Feb 17 10:27 about.html
+-rw-r--r-- 1 root root 9.8K Feb 17 10:29 contact.html
+-rw-r--r-- 1 root root 8.8K Feb 17 10:26 index.html
+-rw-r--r-- 1 root root  22K Feb 17 10:31 main.js
+-rw-r--r-- 1 root root  13K Feb 17 10:28 services.html
+-rw-r--r-- 1 root root 7.3K Feb 17 10:26 styles.css

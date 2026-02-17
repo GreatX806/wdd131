@@ -1,0 +1,15 @@
+38:                <!-- Contact Information -->
+40:                    <h2>Contact Information</h2>
+41:                    <p>We'd love to hear from you. Reach out through any of these channels or fill out the form.</p>
+78:                    <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+80:                    <form id="contactForm">
+81:                        <div class="form-group">
+87:                        <div class="form-group">
+93:                        <div class="form-group">
+98:                        <div class="form-group">
+103:                        <div class="form-group">
+119:                        <div class="form-group">
+131:                        <div class="form-group">
+138:                    </form>
+171:                    <p>We track key performance indicators (KPIs) aligned with your business goals, including traffic, conversions, and revenue growth.</p>
+180:            <h2>Ready to Transform Your Digital Presence?</h2>
