@@ -1,0 +1,208 @@
+/* Import the professional Google Font: Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+/* --- Global and Typography Styles --- */
+body {
+    font-family: 'Inter', Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #F7F9FC; /* Very light, professional background */
+    color: #333;
+}
+h1, h2 {
+    color: #1A237E; /* Deep Navy Blue for headings */
+}
+
+/* --- Header/Navigation Styles --- */
+
+header {
+    background-color: #1A237E; /* Deep professional Navy Blue */
+    color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+#course-title {
+    display: block; 
+    text-align: center;
+    font-size: 1.8em; 
+    font-weight: 700; 
+    padding-bottom: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
+    color: #9FA8DA; /* Light accent color on hover */
+}
+
+
+/* --- Main Element & Grid Setup --- */
+
+main {
+    max-width: 1000px; 
+    margin: 0 auto;
+    padding: 1.5rem; 
+    display: grid;
+    grid-template-columns: 1fr; /* Default to single column */
+    gap: 25px; 
+}
+
+/* Desktop View: 2 Columns with specific placement */
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    /* Place the Profile Title Card in the top-left */
+    .profile-title-card {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        padding-top: 10px; 
+    }
+
+    /* Place the About Me card in the top-right */
+    .card:nth-of-type(2) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+}
+
+/* --- Professional Card Styling and Effects --- */
+
+.card {
+    background-color: #FFFFFF; 
+    border: none; 
+    border-radius: 12px; 
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle base shadow */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    overflow: auto; /* Clears the float inside the card */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Pronounced hover shadow */
+}
+
+/* Style for the invisible title card container */
+.profile-title-card {
+    background-color: transparent; 
+    box-shadow: none; 
+    padding: 0; 
+    transition: none; 
+    margin-bottom: -15px; 
+}
+.profile-title-card:hover {
+    transform: none;
+    box-shadow: none;
+}
+.profile-title-card h1 {
+    font-size: 2.2em;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Image Alignment (Float Right) and Styling --- */
+.card img {
+    float: right; /* Pushes the image to the right */
+    margin-left: 1.5rem; /* Space to the left of the image (separating it from text) */
+    margin-bottom: 1rem; 
+    max-width: 150px; 
+    height: auto;
+    border-radius: 8px; /* Soft square corners */
+    border: 1px solid #D5D5D5; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+/* Special styling for the location text in the About Me card */
+.card p:last-of-type { 
+    font-weight: 500;
+    color: #555;
+    text-align: right; 
+    margin-top: 1.5rem; 
+    padding-top: 0.5rem;
+    border-top: 1px solid #D5D5D5; /* Subtle line above location */
+}
+
+/* Card Heading Style */
+.card h2 {
+    margin-top: 0; 
+    border-bottom: 2px solid #D5D5D5; 
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+/* --- Footer Styles --- */
+
+footer {
+    background-color: #E0E0E0; 
+    text-align: center;
+    padding: 1.2rem;
+    margin-top: 30px;
+    font-size: 0.8em;
+    border-top: 1px solid #D5D5D5;
+}
+
+/* --- List Styles within Cards --- */
+section.card ul {
+    display: list-item;
+    list-style-type: '— '; /* Modern list marker */
+    margin-left: 15px;
+    padding: 0;
+    line-height: 1.8; 
+}
+section.card ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+section.card ul li a:hover {
+    text-decoration: underline;
+    color: #3F51B5; /* Accent color for links */
+}
+.card .profile-title-card img {
+    float: right; /* No floating for profile title image */
+    display: block;
+    margin: 1rem auto; /* Center the image */
+    max-width: 200px; 
+}
+.profile-title-card:hover img {
+    transform: none;
+    box-shadow: none;
+}
+.profile-title-card p {
+    text-align: center;
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 1rem;
+}
+.profile-title-card p:last-of-type {
+    text-align: center;
+    font-weight: 500;
+    color: #555;
+    margin-top: 0.5rem;
+    padding-top: 0;
+    border-top: none;
+}
+.h2{
+    text-align: center;
+}
