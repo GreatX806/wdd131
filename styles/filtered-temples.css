@@ -69,14 +69,14 @@ header {
 
 /* Nav is hidden (collapsed) on small screens until toggled open */
 .navigation {
-  display: none;
-  flex-direction: column;
-  width: 100%;
-  margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 12px;
 }
 
-.navigation.open {
-  display: flex;
+.navigation:not(.open) {
+    display: none;
 }
 
 .navigation button {
