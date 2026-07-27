@@ -1,0 +1,49 @@
+/* ============================================
+   Temple Album — filtered-temples-large.css
+   Larger-screen enhancements (tablet & desktop)
+   ============================================ */
+
+@media (min-width: 700px) {
+  header {
+    flex-wrap: nowrap;
+  }
+
+  /* Hide the hamburger button and always show the nav inline */
+  #menu {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    margin-top: 0;
+    gap: 24px;
+  }
+
+  .navigation button {
+    width: auto;
+    min-height: auto;
+    padding: 6px 4px;
+    border-bottom: 2px solid transparent;
+  }
+
+  .navigation button.active,
+  .navigation button:hover {
+    border-bottom-color: var(--secondary-color);
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery-title {
+    font-size: 1.6rem;
+  }
+}

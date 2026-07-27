@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Temple Album</title>
+    <meta name="description"
+        content="Browse and filter a gallery of Latter-day Saint temples by age, size, and dedication date.">
+    <meta name="author" content="Great Afangide">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="nameHeader">Temple Album</h1>
+        <button id="menu" type="button" title="Menu" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+        <nav class="navigation" aria-label="Filter temples">
+            <button type="button" data-filter="home" class="active" aria-pressed="true">Home</button>
+            <button type="button" data-filter="old" aria-pressed="false">Old</button>
+            <button type="button" data-filter="new" aria-pressed="false">New</button>
+            <button type="button" data-filter="large" aria-pressed="false">Large</button>
+            <button type="button" data-filter="small" aria-pressed="false">Small</button>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="gallery-title">All Temples</h2>
+        <div class="gallery">
+            <!-- Temple cards are generated dynamically by scripts/filtered-temples.js -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Great Afangide | Temple Album | WDD 131</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+
+</html>
