@@ -1,73 +1,299 @@
-const products = [
-    {
-        id: "fc-1888",
-        name: "flux capacitor",
-        averagerating: 4.5
-    },
-    {
-        id: "fc-2050",
-        name: "power laces",
-        averagerating: 4.7
-    },
-    {
-        id: "fs-1987",
-        name: "time circuits",
-        averagerating: 3.5
-    },
-    {
-        id: "ac-2000",
-        name: "low voltage reactor",
-        averagerating: 3.9
-    },
-    {
-        id: "jj-1969",
-        name: "warp equalizer",
-        averagerating: 5.0
+/* General */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef2f7;
+    color: #172033;
+    line-height: 1.5;
+}
+
+
+/* Header */
+
+header {
+    background-color: #17324d;
+    color: #ffffff;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+
+/* Main */
+
+main {
+    width: 90%;
+    max-width: 700px;
+    margin: 2rem auto;
+}
+
+
+/* Form */
+
+form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group label span {
+    color: #596579;
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+
+/* Select and text inputs */
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #718096;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #172033;
+    font-size: 1rem;
+}
+
+select:focus,
+input[type="date"]:focus,
+input[type="text"]:focus,
+textarea:focus {
+    outline: 2px solid #2563eb;
+    border-color: #2563eb;
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+
+/* Fieldsets */
+
+fieldset {
+    margin: 0 0 1.5rem;
+    padding: 1rem;
+    border: 1px solid #aab4c3;
+    border-radius: 7px;
+}
+
+legend {
+    padding: 0 0.5rem;
+    font-weight: bold;
+}
+
+.hint {
+    margin-top: 0;
+    color: #596579;
+    font-size: 0.9rem;
+}
+
+
+/* Rating */
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.rating label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.rating input {
+    position: absolute;
+    opacity: 0;
+}
+
+.rating span {
+    color: #596579;
+    font-size: 2.5rem;
+}
+
+.rating label:hover span,
+.rating input:checked + span {
+    color: #f59e0b;
+}
+
+.rating input:focus-visible + span {
+    outline: 2px solid #2563eb;
+    border-radius: 4px;
+}
+
+.rating small {
+    color: #596579;
+}
+
+
+/* Checkboxes */
+
+.checkbox-option {
+    display: block;
+    margin: 0.7rem 0;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.checkbox-option input {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+
+/* Submit button */
+
+.submit-button {
+    width: 100%;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #1d4ed8;
+}
+
+.submit-button:focus {
+    outline: 2px solid #172033;
+    outline-offset: 2px;
+}
+
+
+/* Confirmation page */
+
+.confirmation {
+    display: flex;
+    justify-content: center;
+}
+
+.confirmation-card {
+    width: 100%;
+    padding: 3rem 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.success-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    background-color: #15803d;
+    color: #ffffff;
+    font-size: 3rem;
+    line-height: 70px;
+}
+
+.confirmation-card h2 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.review-count {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: #eef2f7;
+    border-radius: 7px;
+}
+
+.review-count p {
+    margin: 0.2rem;
+}
+
+.review-count strong {
+    display: block;
+    color: #2563eb;
+    font-size: 3rem;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.back-button:hover {
+    background-color: #1d4ed8;
+}
+
+
+/* Footer */
+
+footer {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #17324d;
+    color: #ffffff;
+    text-align: center;
+}
+
+footer p {
+    margin: 0.3rem;
+}
+
+
+/* Responsive design */
+
+@media screen and (max-width: 500px) {
+
+    header h1 {
+        font-size: 1.5rem;
     }
-];
 
+    main {
+        width: 94%;
+        margin: 1rem auto;
+    }
 
-// Populate the product select field
-const productSelect = document.querySelector("#productName");
+    form {
+        padding: 1.2rem;
+    }
 
-if (productSelect) {
-    products.forEach(product => {
-        const option = document.createElement("option");
+    .rating span {
+        font-size: 2rem;
+    }
 
-        option.value = product.id;
-        option.textContent = product.name;
-
-        productSelect.appendChild(option);
-    });
-}
-
-
-// Footer current year
-const currentYear = document.querySelector("#currentYear");
-
-if (currentYear) {
-    currentYear.textContent = new Date().getFullYear();
-}
-
-
-// Footer last modified date
-const lastModified = document.querySelector("#lastModified");
-
-if (lastModified) {
-    lastModified.textContent = document.lastModified;
-}
-
-
-// Review counter
-const reviewCounter = document.querySelector("#reviewCounter");
-
-if (reviewCounter) {
-
-    let reviewCount = Number(localStorage.getItem("reviewCount")) || 0;
-
-    reviewCount += 1;
-
-    localStorage.setItem("reviewCount", reviewCount);
-
-    reviewCounter.textContent = reviewCount;
+    .confirmation-card {
+        padding: 2rem 1rem;
+    }
 }
