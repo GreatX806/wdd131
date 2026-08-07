@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travel Tips | TravelWise</title>
+
+    <meta name="description"
+        content="Explore practical travel tips for packing, budgeting, transportation, safety, and accommodation.">
+
+    <meta name="author" content="Great Afangide">
+
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <a class="logo" href="index.html">
+                <span class="logo-icon">✈</span>
+                <span>TravelWise</span>
+            </a>
+
+            <button class="menu-button" id="menuButton" aria-label="Open navigation menu">
+                ☰
+            </button>
+
+            <nav id="mainNav" class="main-nav">
+                <a href="index.html">Home</a>
+                <a class="active" href="tips.html">Travel Tips</a>
+                <a href="resources.html">Resources</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="page-hero">
+
+            <div class="page-hero-content">
+
+                <p class="eyebrow">TRAVEL SMARTER</p>
+
+                <h1>Travel tips that make planning easier.</h1>
+
+                <p>
+                    Simple advice to help you prepare for your
+                    journey from departure to arrival.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow dark-eyebrow">EXPLORE OUR TIPS</p>
+
+                <h2>Find advice for your trip</h2>
+
+                <p>
+                    Select a category to filter the travel advice.
+                </p>
+
+            </div>
+
+
+            <div class="filter-buttons">
+
+                <button class="filter-button active-filter" data-category="all">
+                    All Tips
+                </button>
+
+                <button class="filter-button" data-category="packing">
+                    Packing
+                </button>
+
+                <button class="filter-button" data-category="budget">
+                    Budget
+                </button>
+
+                <button class="filter-button" data-category="safety">
+                    Safety
+                </button>
+
+                <button class="filter-button" data-category="transport">
+                    Transport
+                </button>
+
+            </div>
+
+
+            <div id="tipsContainer" class="tips-grid">
+                <!-- JavaScript inserts tips here -->
+            </div>
+
+        </section>
+
+
+        <section class="tip-highlight">
+
+            <div class="tip-highlight-content">
+
+                <span class="highlight-number">01</span>
+
+                <div>
+
+                    <p class="eyebrow">BEFORE YOU LEAVE</p>
+
+                    <h2>Make a simple pre-trip checklist.</h2>
+
+                    <p>
+                        Write down your important documents,
+                        transportation details, accommodation,
+                        emergency contacts, and things you need
+                        to complete before departure.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <div>
+                <a class="footer-logo" href="index.html">TravelWise</a>
+
+                <p>
+                    Practical travel tips and resources for
+                    smarter journeys.
+                </p>
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Explore</h3>
+
+                <a href="index.html">Home</a>
+                <a href="tips.html">Travel Tips</a>
+                <a href="resources.html">Resources</a>
+                <a href="references.html">References</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; <span id="currentYear"></span> TravelWise |
+                WDD 131: Dynamic Web Fundamentals
+            </p>
+
+            <p>
+                Last Modified:
+                <span id="lastModified"></span>
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

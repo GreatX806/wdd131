@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travel Resources | TravelWise</title>
+
+    <meta name="description"
+        content="Use TravelWise travel resources including a trip planner, packing checklist, and useful preparation tools.">
+
+    <meta name="author" content="Great Afangide">
+
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <a class="logo" href="index.html">
+                <span class="logo-icon">✈</span>
+                <span>TravelWise</span>
+            </a>
+
+            <button class="menu-button" id="menuButton" aria-label="Open navigation menu">
+                ☰
+            </button>
+
+            <nav id="mainNav" class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="tips.html">Travel Tips</a>
+                <a class="active" href="resources.html">Resources</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="page-hero resource-hero">
+
+            <div class="page-hero-content">
+
+                <p class="eyebrow">PLAN WITH PURPOSE</p>
+
+                <h1>Resources for your next journey.</h1>
+
+                <p>
+                    Organize the details that matter before
+                    you leave home.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow dark-eyebrow">TRIP PLANNER</p>
+
+                <h2>Build your travel checklist</h2>
+
+                <p>
+                    Check each item as you complete it.
+                    Your progress is saved in your browser.
+                </p>
+
+            </div>
+
+
+            <div class="planner-layout">
+
+                <div class="checklist-card">
+
+                    <div class="checklist-header">
+
+                        <div>
+                            <h3>Pre-trip checklist</h3>
+                            <p>Prepare before departure.</p>
+                        </div>
+
+                        <button id="resetChecklist" class="reset-button">
+                            Reset
+                        </button>
+
+                    </div>
+
+
+                    <div class="progress-area">
+
+                        <div class="progress-text">
+                            <span>Progress</span>
+                            <strong id="progressText">0%</strong>
+                        </div>
+
+                        <div class="progress-bar">
+                            <div id="progressBar"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div id="checklistContainer" class="checklist">
+
+                        <label class="check-item">
+                            <input type="checkbox" data-task="passport">
+                            <span>Check passport and travel documents</span>
+                        </label>
+
+                        <label class="check-item">
+                            <input type="checkbox" data-task="booking">
+                            <span>Confirm accommodation booking</span>
+                        </label>
+
+                        <label class="check-item">
+                            <input type="checkbox" data-task="transport">
+                            <span>Confirm transportation details</span>
+                        </label>
+
+                        <label class="check-item">
+                            <input type="checkbox" data-task="budget">
+                            <span>Prepare a travel budget</span>
+                        </label>
+
+                        <label class="check-item">
+                            <input type="checkbox" data-task="packing">
+                            <span>Complete packing</span>
+                        </label>
+
+                        <label class="check-item">
+                            <input type="checkbox" data-task="emergency">
+                            <span>Save emergency contacts</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <aside class="resource-card">
+
+                    <span class="resource-icon">🧭</span>
+
+                    <h3>Planning reminder</h3>
+
+                    <p>
+                        Always verify current entry requirements,
+                        transportation schedules, accommodation
+                        details, and local guidance before traveling.
+                    </p>
+
+                    <a href="tips.html">
+                        Read travel tips →
+                    </a>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+
+        <section class="section resources-section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow dark-eyebrow">USEFUL RESOURCES</p>
+
+                <h2>Things to research before traveling</h2>
+
+            </div>
+
+
+            <div class="resource-grid">
+
+                <article class="resource-box">
+                    <span>01</span>
+                    <h3>Destination</h3>
+                    <p>
+                        Learn about the destination's climate,
+                        culture, transportation, and major attractions.
+                    </p>
+                </article>
+
+
+                <article class="resource-box">
+                    <span>02</span>
+                    <h3>Documents</h3>
+                    <p>
+                        Check passport validity, visas, identification,
+                        tickets, reservations, and insurance requirements.
+                    </p>
+                </article>
+
+
+                <article class="resource-box">
+                    <span>03</span>
+                    <h3>Money</h3>
+                    <p>
+                        Research local currency, payment options,
+                        expected costs, and your overall budget.
+                    </p>
+                </article>
+
+
+                <article class="resource-box">
+                    <span>04</span>
+                    <h3>Communication</h3>
+                    <p>
+                        Research connectivity options, important
+                        phone numbers, and useful local phrases.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="newsletter">
+
+            <div>
+
+                <p class="eyebrow">TRAVEL PREPARATION</p>
+
+                <h2>What is your next destination?</h2>
+
+                <p>
+                    Tell us where you would like to travel.
+                </p>
+
+            </div>
+
+
+            <form id="destinationForm" class="destination-form">
+
+                <label for="destination">
+                    Destination
+                </label>
+
+                <input
+                    type="text"
+                    id="destination"
+                    name="destination"
+                    placeholder="e.g. Cape Town"
+                    required>
+
+                <button type="submit" class="button primary-button">
+                    Save Destination
+                </button>
+
+            </form>
+
+
+            <p id="destinationMessage" class="destination-message"></p>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <div>
+                <a class="footer-logo" href="index.html">TravelWise</a>
+
+                <p>
+                    Practical travel tips and resources for
+                    smarter journeys.
+                </p>
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Explore</h3>
+
+                <a href="index.html">Home</a>
+                <a href="tips.html">Travel Tips</a>
+                <a href="resources.html">Resources</a>
+                <a href="references.html">References</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; <span id="currentYear"></span> TravelWise |
+                WDD 131: Dynamic Web Fundamentals
+            </p>
+
+            <p>
+                Last Modified:
+                <span id="lastModified"></span>
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
