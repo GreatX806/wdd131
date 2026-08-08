@@ -1,0 +1,204 @@
+/* ============================================
+   Cascade Rafting Co. — Site Plan
+   Design tokens (matches wwr/styles/rafting.css)
+   ============================================ */
+:root {
+  --primary-color: #0F3D3E;
+  --secondary-color: #E2A63B;
+  --accent1-color: #16211F;
+  --accent2-color: #EFF3F2;
+  --heading-font: "Big Shoulders Display", sans-serif;
+  --body-font: "Inter", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--accent1-color);
+  background-color: var(--accent2-color);
+  line-height: 1.6;
+}
+
+header,
+main,
+footer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  padding-top: 32px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid var(--secondary-color);
+}
+
+h1 {
+  font-family: var(--heading-font);
+  font-size: 2.6rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-family: var(--heading-font);
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+section {
+  margin: 40px 0;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+h2 {
+  font-family: var(--heading-font);
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+ul {
+  margin-left: 22px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* Site name */
+.logo-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.site-name-text {
+  font-family: var(--heading-font);
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.domain-note {
+  font-style: italic;
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+/* Color schema */
+.swatch-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.swatch {
+  flex: 1 1 180px;
+}
+
+.swatch-color {
+  width: 100%;
+  height: 70px;
+  border-radius: 4px;
+  border: 1px solid rgba(0,0,0,0.1);
+  margin-bottom: 8px;
+}
+
+/* Typography */
+.type-sample {
+  margin-bottom: 24px;
+}
+
+.type-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.type-demo {
+  font-size: 1.5rem;
+  margin: 6px 0;
+}
+
+.heading-demo {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.body-demo {
+  font-family: var(--body-font);
+  font-size: 1.1rem;
+}
+
+.type-note {
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+/* Wireframes */
+.wireframe-row {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.wireframe figcaption {
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+.wireframe svg {
+  display: block;
+  max-width: 100%;
+}
+
+.wireframe:not(.wireframe-mobile) svg {
+  width: 400px;
+}
+
+.wireframe-mobile svg {
+  width: 160px;
+}
+
+/* Footer */
+footer {
+  padding: 24px 20px 40px;
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 16px;
+  }
+}
