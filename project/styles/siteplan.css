@@ -133,6 +133,23 @@ li {
   margin-bottom: 8px;
 }
 
+.swatch-color-primary {
+  background-color: var(--primary-color);
+}
+
+.swatch-color-secondary {
+  background-color: var(--secondary-color);
+}
+
+.swatch-color-text {
+  background-color: var(--accent1-color);
+}
+
+.swatch-color-bg {
+  background-color: var(--accent2-color);
+  border: 1px solid rgba(0,0,0,0.15);
+}
+
 /* Typography */
 .type-sample {
   margin-bottom: 24px;
