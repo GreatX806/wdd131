@@ -22,15 +22,17 @@
     <main>
         <form method="get" action="review.html">
 
+            <p class="required-note"><span class="required">*</span> indicates a required field</p>
+
             <div class="form-group">
-                <label for="productName">Product Name</label>
+                <label for="productName">Product Name <span class="required">*</span></label>
                 <select id="productName" name="productName" required>
                     <option value="" disabled selected>Select a Product ...</option>
                 </select>
             </div>
 
             <fieldset>
-                <legend>Overall Rating</legend>
+                <legend>Overall Rating <span class="required">*</span></legend>
 
                 <div class="rating">
                     <label for="rating1">
@@ -66,7 +68,7 @@
             </fieldset>
 
             <div class="form-group">
-                <label for="installDate">Date of Installation</label>
+                <label for="installDate">Date of Installation <span class="required">*</span></label>
                 <input type="date" id="installDate" name="installDate" required>
             </div>
 
@@ -97,7 +99,7 @@
 
             <div class="form-group">
                 <label for="writtenReview">
-                    Written Review <span>(Optional)</span>
+                    Written Review <span class="optional">(Optional)</span>
                 </label>
 
                 <textarea id="writtenReview" name="writtenReview"
@@ -106,7 +108,7 @@
 
             <div class="form-group">
                 <label for="userName">
-                    Your Name <span>(Optional)</span>
+                    Your Name <span class="optional">(Optional)</span>
                 </label>
 
                 <input type="text" id="userName" name="userName"

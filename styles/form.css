@@ -1,299 +1,222 @@
-/* General */
+/* ============================================
+   Product Review Form
+   Design tokens (all pairings meet WCAG AA)
+   ============================================ */
+:root {
+  --primary-color: #10375C;     /* deep navy — headings, buttons */
+  --secondary-color: #B3261E;   /* accessible red — required markers */
+  --text-color: #1F2937;        /* near-black — body text */
+  --muted-color: #4B5563;       /* dark gray — hints, optional labels, placeholders */
+  --bg-color: #F5F7FA;          /* light gray page background */
+  --surface-color: #FFFFFF;     /* white card background */
+  --border-color: #94A3B8;      /* medium gray borders */
+  --heading-font: "Georgia", serif;
+  --body-font: "Segoe UI", Arial, sans-serif;
+}
 
 * {
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #eef2f7;
-    color: #172033;
-    line-height: 1.5;
+  font-family: var(--body-font);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  line-height: 1.6;
 }
 
-
-/* Header */
-
 header {
-    background-color: #17324d;
-    color: #ffffff;
-    padding: 1.5rem;
-    text-align: center;
+  background-color: var(--primary-color);
+  padding: 24px 20px;
+  text-align: center;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2rem;
+  font-family: var(--heading-font);
+  color: #FFFFFF;
+  font-size: 2rem;
 }
-
-
-/* Main */
 
 main {
-    width: 90%;
-    max-width: 700px;
-    margin: 2rem auto;
+  max-width: 640px;
+  margin: 32px auto;
+  padding: 0 20px 40px;
 }
 
-
-/* Form */
-
 form {
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.required-note {
+  font-size: 0.9rem;
+  color: var(--muted-color);
+  margin-bottom: 4px;
+}
+
+.required {
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.optional {
+  color: var(--muted-color);
+  font-weight: 400;
+  font-size: 0.85rem;
 }
 
 .form-group {
-    margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
+label {
+  font-weight: 600;
+  color: var(--primary-color);
 }
-
-.form-group label span {
-    color: #596579;
-    font-size: 0.9rem;
-    font-weight: normal;
-}
-
-
-/* Select and text inputs */
 
 select,
-input[type="date"],
 input[type="text"],
+input[type="date"],
 textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #718096;
-    border-radius: 5px;
-    background-color: #ffffff;
-    color: #172033;
-    font-size: 1rem;
+  font-family: var(--body-font);
+  font-size: 1rem;
+  color: var(--text-color);
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 10px 12px;
 }
 
 select:focus,
-input[type="date"]:focus,
 input[type="text"]:focus,
+input[type="date"]:focus,
 textarea:focus {
-    outline: 2px solid #2563eb;
-    border-color: #2563eb;
+  outline: 2px solid var(--primary-color);
+  outline-offset: 1px;
 }
 
 textarea {
-    min-height: 140px;
-    resize: vertical;
+  resize: vertical;
+  min-height: 100px;
 }
 
-
-/* Fieldsets */
+::placeholder {
+  color: var(--muted-color);
+  opacity: 1;
+}
 
 fieldset {
-    margin: 0 0 1.5rem;
-    padding: 1rem;
-    border: 1px solid #aab4c3;
-    border-radius: 7px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 legend {
-    padding: 0 0.5rem;
-    font-weight: bold;
+  font-weight: 700;
+  color: var(--primary-color);
+  padding: 0 6px;
 }
 
 .hint {
-    margin-top: 0;
-    color: #596579;
-    font-size: 0.9rem;
+  font-size: 0.85rem;
+  color: var(--muted-color);
 }
 
-
-/* Rating */
-
+/* Rating stars */
 .rating {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
 }
 
 .rating label {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    font-weight: normal;
-}
-
-.rating input {
-    position: absolute;
-    opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font-weight: 400;
+  color: var(--text-color);
+  cursor: pointer;
 }
 
 .rating span {
-    color: #596579;
-    font-size: 2.5rem;
+  font-size: 1.6rem;
+  color: var(--primary-color);
 }
 
-.rating label:hover span,
-.rating input:checked + span {
-    color: #f59e0b;
-}
-
-.rating input:focus-visible + span {
-    outline: 2px solid #2563eb;
-    border-radius: 4px;
+.rating input[type="radio"]:checked + span {
+  color: var(--secondary-color);
 }
 
 .rating small {
-    color: #596579;
+  font-size: 0.8rem;
+  color: var(--muted-color);
 }
-
 
 /* Checkboxes */
-
 .checkbox-option {
-    display: block;
-    margin: 0.7rem 0;
-    cursor: pointer;
-    font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  color: var(--text-color);
+  cursor: pointer;
 }
-
-.checkbox-option input {
-    width: auto;
-    margin-right: 0.5rem;
-}
-
 
 /* Submit button */
-
 .submit-button {
-    width: 100%;
-    padding: 0.9rem;
-    border: none;
-    border-radius: 6px;
-    background-color: #2563eb;
-    color: #ffffff;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
+  align-self: flex-start;
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 28px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .submit-button:hover {
-    background-color: #1d4ed8;
+  background-color: #0B2A46;
 }
 
-.submit-button:focus {
-    outline: 2px solid #172033;
-    outline-offset: 2px;
+.submit-button:focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
 }
-
-
-/* Confirmation page */
-
-.confirmation {
-    display: flex;
-    justify-content: center;
-}
-
-.confirmation-card {
-    width: 100%;
-    padding: 3rem 2rem;
-    background-color: #ffffff;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
-}
-
-.success-icon {
-    width: 70px;
-    height: 70px;
-    margin: 0 auto 1rem;
-    border-radius: 50%;
-    background-color: #15803d;
-    color: #ffffff;
-    font-size: 3rem;
-    line-height: 70px;
-}
-
-.confirmation-card h2 {
-    margin-bottom: 0.5rem;
-    font-size: 2rem;
-}
-
-.review-count {
-    margin: 2rem 0;
-    padding: 1.5rem;
-    background-color: #eef2f7;
-    border-radius: 7px;
-}
-
-.review-count p {
-    margin: 0.2rem;
-}
-
-.review-count strong {
-    display: block;
-    color: #2563eb;
-    font-size: 3rem;
-}
-
-.back-button {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background-color: #2563eb;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-}
-
-.back-button:hover {
-    background-color: #1d4ed8;
-}
-
 
 /* Footer */
-
 footer {
-    margin-top: 2rem;
-    padding: 1.5rem;
-    background-color: #17324d;
-    color: #ffffff;
-    text-align: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.85rem;
+  color: var(--muted-color);
 }
 
-footer p {
-    margin: 0.3rem;
-}
+/* Responsive */
+@media (max-width: 500px) {
+  main {
+    margin: 16px auto;
+  }
 
+  form {
+    padding: 20px;
+  }
 
-/* Responsive design */
-
-@media screen and (max-width: 500px) {
-
-    header h1 {
-        font-size: 1.5rem;
-    }
-
-    main {
-        width: 94%;
-        margin: 1rem auto;
-    }
-
-    form {
-        padding: 1.2rem;
-    }
-
-    .rating span {
-        font-size: 2rem;
-    }
-
-    .confirmation-card {
-        padding: 2rem 1rem;
-    }
+  .rating {
+    gap: 12px;
+  }
 }
